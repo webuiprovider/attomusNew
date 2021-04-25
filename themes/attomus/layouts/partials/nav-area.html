@@ -1,0 +1,43 @@
+<div class="nav-area">
+    <div class="navbar-area">
+        <div class="main-nav">
+            <nav class="navbar navbar-expand-md">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">
+                        <img src="{{.Site.Params.logo | relURL }}" alt="{{.Site.Title }}">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmain" aria-controls="navmain" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse mean-menu" id="navmain"> 
+                        <ul class="navbar-nav ml-auto">
+                            {{ $currentPage := . }}
+                            {{ range .Site.Menus.main }}
+                                {{ $active := or (eq $currentPage.Title .Name) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) }}
+
+                                {{ if .HasChildren }}
+                                <!-- Navbar dropdown -->
+                                <li class="nav-item dropdown dropdown-hoverable" >
+                                    <a href="{{ .URL }}" class="nav-link dropdown-toggle" > {{ .Name }}  </a>
+                                    <div class="dropdown-menu">
+                                        {{ range .Children }}
+                                        <a href="{{ .URL }}" class="dropdown-item">{{ .Name }}</a>
+                                        {{end}}
+                                    </div>
+                                </li>
+
+                            {{ else }}
+                            <li class="nav-item">
+                                <a href="{{ .URL  }}" class="nav-link {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }} {{ if $active }}active{{ end }}">{{.Name}}</a>
+                            </li>
+                            {{ end }}
+                            {{end}}
+
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>

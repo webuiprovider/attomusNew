@@ -1,0 +1,21 @@
+<section class="section bg-light">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <section class="customer-logos slider">
+
+                    {{range .Site.Data.partners}}
+                        <div class="slide">
+                            <a href="{{.url}}">
+                                <img src="{{.logo | relURL }}" class="cld-responsive" alt="{{.name}}">
+                                <p>{{.name}}</p>
+                            </a>
+                        </div>
+                        
+                    {{end}}
+
+                </section>
+            </div>
+        </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+<div class="top-bar">
+    <div class="container-fluid">
+        <div class="row align-items-center">            
+            <div class="col-lg-6 col-sm-8">
+                <ul class="top-head-left">
+                    <li>
+                        <a href="#" class="mr-2"><span class="fa fa-phone-square mr-1"></span> {{.Site.Params.phone}}</a> 
+                    </li>
+                    <li>
+                        <a href="#"><span class="fa fa-envelope-square mr-1"></span> {{.Site.Params.email}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-sm-4">
+                <ul class="social ml-md-auto top-head-right text-md-right">
+                    {{ range .Site.Params.social }}
+                        <li class=""> 
+                            <a href="{{ .url }}" >
+                                <i class="{{ .icon_pack}} fa-{{ .icon}}"></i> 
+                            </a> 
+                        </li>
+                    {{end}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+

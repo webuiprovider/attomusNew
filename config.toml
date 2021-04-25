@@ -1,0 +1,147 @@
+baseURL = ""
+languageCode = "en-us"
+title = "Cyber Security & Advanced Technology | Attomus"
+theme = "attomus"
+# SA 29.9.18 Added SEO elements
+enableRobotsTXT = true
+canonifyURLs = false
+paginate = 5
+googleAnalytics = " "
+
+# Enable code syntax highlighting
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsStyle = "monokai"
+
+[params]
+phone = "+44 20 3026 6250"
+email = "support@attomus.com"
+logo = "/images/logo.png"
+    [[menu.main]]
+        url = "/"
+        name = "Home"
+        weight = 1
+    [[menu.main]]
+        identifier = "services"
+        url = "/services/"
+        name = "Services"
+        weight = 2
+
+        [[menu.main]]
+            parent = "services"
+            name = "delivery"
+            url = "/services/delivery/"
+            weight = 10
+        [[menu.main]]
+            parent = "services"
+            name = "investigations"
+            url = "/services/investigations/"
+            weight = 20
+        [[menu.main]]
+            parent = "services"
+            name = "security"
+            url = "/services/security/"
+            weight = 30
+        [[menu.main]]
+            parent = "services"
+            name = "technology"
+            url = "/services/technology/"
+            weight = 40
+
+    [[menu.main]]
+        identifier = "partners"
+        url = "/partners/"
+        name = "Partners"
+        weight = 3
+
+            [[menu.main]]
+                parent = "partners"
+                name = "Atlassian"
+                url = "/partners/atlassian/"
+                weight = 10
+            [[menu.main]]
+                parent = "partners"
+                name = "JetBrains"
+                url = "/partners/jetbrains/"
+                weight = 20
+            [[menu.main]]
+                parent = "partners"
+                name = "Netlify"
+                url = "/partners/netlify/"
+                weight = 30
+            [[menu.main]]
+                parent = "partners"
+                name = "XCP-ng"
+                url = "/partners/xcp-ng/"
+                weight = 40
+
+    [[menu.main]]
+        identifier = "products"
+        url = "/products/"
+        name = "Products"
+        weight = 4
+
+        [[menu.main]]
+            parent = "products"
+            name = "Semafore"
+            url = "/products/semafore/"
+            weight = 10
+        [[menu.main]]
+            parent = "products"
+            name = "CuriousLee"
+            url = "/products/curiouslee/"
+            weight = 20
+
+    [[menu.main]]
+        url = "/blog/"
+        name = "Blog"
+        weight = 6
+
+    [[menu.main]]
+        identifier = "about-us"
+        url = "/about-us/"
+        name = "About us"
+        description = "Cyber Security & Advanced Technology | Attomus"
+        weight = 5
+
+        [[menu.main]]
+            parent = "about-us"
+            name = "Attomus Clients"
+            url = "/about-us/attomus-clients/"
+            weight = 10
+        [[menu.main]]
+            parent = "about-us"
+            url = "/contact-us/"
+            name = "Contact us"
+            weight = 20
+
+
+    [[params.social]]
+        url   = "https://twitter.com/attomushq"
+        icon  = "twitter-square" # icon name without the 'fa-'
+        icon_pack = "fa"
+    [[params.social]]
+        url   = "https://linkedin.com/company/attomushq"
+        icon  = "linkedin-square" # icon name without the 'fa-'
+        icon_pack = "fa"
+    [[params.social]]
+        url = "mailto:semafore@attomus.com"  # For a direct email link, use "mailto:test@example.org".
+        icon = "envelope-square" # icon name without the 'fa-'
+        icon_pack = "fa"
+    [[params.social]]
+        url = ""  # For a direct email link, use "mailto:test@example.org".
+        icon = "question-circle" # icon name without the 'fa-'
+        icon_pack = "fa"
+    [[params.social]]
+        url   = "/index.xml"
+        icon  = "rss-square" # icon name without the 'fa-'
+        icon_pack = "fa"
+
+        
+        
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+

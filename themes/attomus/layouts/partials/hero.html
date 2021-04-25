@@ -1,0 +1,20 @@
+<section class="hero" style="background-image: url({{.Params.hero.image | relURL }});"> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="banner-text">
+                    <p class="hero-sub">World Class Cyber Security</p>
+                    <h1>{{.Params.hero.heading | markdownify }}</h1>
+                    <p class="banner-info">
+                        {{.Params.hero.desc}}
+                    </p>
+                    <div class="banner-btn">
+                        {{range .Params.hero.btn}}
+                            <a class="default-btn" href="{{.btnUrl}}">{{.btnText}}</a>
+                        {{end}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

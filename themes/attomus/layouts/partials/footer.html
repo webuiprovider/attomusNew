@@ -1,0 +1,101 @@
+<footer class="footer">
+    <div class="container-fluid px-lg-5">
+        <div class="row">
+            <div class="col-md-8 py-5">
+                <div class="row">
+                    <div class="col-md-4 mb-md-0 mb-4">
+                        <h2 class="footer-heading">About us</h2>
+                        <p>ATTOMUS is an advanced technology company offering security services, technology applications, and management consultancy for corporations and government entities in the UK and globally.</p>
+                        <ul class="footer-social p-0">
+                            <li><a href="#" title="Twitter"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="#" title="Facebook"><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="#" title="Instagram"><span class="fa fa-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12 col-lg-10">
+                                <div class="row">
+                                    <div class="col-md-4 mb-md-0 mb-4">
+                                        <h2 class="footer-heading">Services</h2>
+                                        {{ if .Site.Menus.main }}                                           
+                                            <ul class="list-unstyled">                                                
+                                                {{ range sort .Site.Menus.main }}
+                                                    {{ if and .HasChildren (eq .Name "Services") }}  
+                                                        {{ range .Children }}
+                                                            <li><a href="{{ .URL }}" class="py-1 d-block">{{ .Name }}</a></li>
+                                                        {{ end }}
+                                
+                                                    {{ end }}
+                                                {{ end }}
+                                            </ul>
+                                            {{ end }}
+                                    </div>
+                                    <div class="col-md-4 mb-md-0 mb-4">
+                                        <h2 class="footer-heading">Discover</h2>
+                                        <ul class="list-unstyled">
+                                            <li><a href="/about-us" class="py-1 d-block">About us</a></li>
+                                            <li><a href="/contact-us" class="py-1 d-block">Contract us</a></li>
+                                            <li><a href="/terms" class="py-1 d-block">Terms &amp; Conditions</a></li>
+                                            <li><a href="/privacy" class="py-1 d-block">Privacy</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4 mb-md-0 mb-4">
+                                        <h2 class="footer-heading">Partners</h2>
+                                        <ul class="list-unstyled">
+                                            {{ if .Site.Menus.main }}                                           
+                                            <ul class="list-unstyled">                                                
+                                                {{ range sort .Site.Menus.main }}
+                                                    {{ if and .HasChildren (eq .Name "Partners") }}  
+                                                        {{ range .Children }}
+                                                            <li><a href="{{ .URL }}" class="py-1 d-block">{{ .Name }}</a></li>
+                                                        {{ end }}
+                                
+                                                    {{ end }}
+                                                {{ end }}
+                                            </ul>
+                                            {{ end }}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-md-5">
+                    <div class="col-md-12">
+                        <p class="copyright">Copyright 2021 © All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 py-md-5 py-4 aside-stretch-right pl-lg-5">                  
+            <div style="clear: both">
+                <a class="twitter-timeline" 
+                   data-lang="en" 
+                   data-width="500" 
+                   data-theme="light" 
+                   data-link-color="#00a99d"
+                   data-show-replies="false" 
+                   data-tweet-limit="1" 
+                   data-chrome="nofooter no header"
+                   href="https://twitter.com/AttomusHQ?ref_src=twsrc%5Etfw" >
+                   Tweets by AttomusHQ
+                </a>
+                </div>
+                <br>
+                <div>
+                <a class="twitter-follow-button" align="center"
+                   href="https://twitter.com/AttomusHQ?ref_src=twsrc%5Etfw" >
+                    Follow us here!
+                </a>
+                </div>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>    
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
