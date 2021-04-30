@@ -7,9 +7,11 @@
                     {{range .Site.Data.partners}}
                         <div class="slide">
                             <a href="{{.url}}">
-                                <img src="{{.logo | relURL }}" class="cld-responsive" alt="{{.name}}">
-                                <p>{{.name}}</p>
+                                <img src="{{.logo | relURL }}" class="cld-responsive" alt="{{.name}}">                               
                             </a>
+                            <div class="client-name">
+                                <p>{{.name}}</p>
+                            </div>
                         </div>
                         
                     {{end}}

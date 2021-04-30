@@ -579,7 +579,7 @@ a{
 .slick-slide {
     margin: 0px 10px;
     p{
-        display: none;
+        /*display: none;*/
     }
     a{
         min-height: 190px;
@@ -589,6 +589,10 @@ a{
     }
     img {
         width: 100%;
+      }
+      .client-name{
+        padding: 8px 4px;
+        text-align: center;
       }
   }
   
