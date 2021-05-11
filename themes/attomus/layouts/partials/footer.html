@@ -3,7 +3,56 @@
         <div class="row">
             <div class="col-md-8 py-5">
                 <div class="row">
-                    <div class="col-md-4 mb-md-0 mb-4">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="row">
+                            <div class="col-md-4 mb-md-0 mb-4">
+                                <h2 class="footer-heading">Services</h2>
+                                {{ if .Site.Menus.main }}                                           
+                                    <ul class="list-unstyled">                                                
+                                        {{ range sort .Site.Menus.main }}
+                                            {{ if and .HasChildren (eq .Name "Services") }}  
+                                                {{ range .Children }}
+                                                    <li><a href="{{ .URL }}" class="py-1 d-block">{{ .Name }}</a></li>
+                                                {{ end }}
+                        
+                                            {{ end }}
+                                        {{ end }}
+                                    </ul>
+                                    {{ end }}
+                            </div>
+                            <div class="col-md-4 mb-md-0 mb-4">
+                                <h2 class="footer-heading">Discover</h2>
+                                <ul class="list-unstyled">
+                                    <li><a href="/about-us" class="py-1 d-block">About us</a></li>
+                                    <li><a href="/contact-us" class="py-1 d-block">Contract us</a></li>
+                                    <li><a href="/terms" class="py-1 d-block">Terms &amp; Conditions</a></li>
+                                    <li><a href="/privacy" class="py-1 d-block">Privacy</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 mb-md-0 mb-4">
+                                <h2 class="footer-heading">Partners</h2>
+                                <ul class="list-unstyled">
+                                    {{ if .Site.Menus.main }}                                           
+                                    <ul class="list-unstyled">                                                
+                                        {{ range sort .Site.Menus.main }}
+                                            {{ if and .HasChildren (eq .Name "Partners") }}  
+                                                {{ range .Children }}
+                                                    <li><a href="{{ .URL }}" class="py-1 d-block">{{ .Name }}</a></li>
+                                                {{ end }}
+                        
+                                            {{ end }}
+                                        {{ end }}
+                                    </ul>
+                                    {{ end }}
+                                </ul>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-12  my-5">
                         <h2 class="footer-heading">About us</h2>
                         <p>ATTOMUS is an advanced technology company offering security services, technology applications, and management consultancy for corporations and government entities in the UK and globally.</p>
                         <ul class="footer-social p-0">
@@ -12,63 +61,16 @@
                             <li><a href="#" title="Instagram"><span class="fa fa-instagram"></span></a></li>
                         </ul>
                     </div>
-                    <div class="col-md-8">
-                        <div class="row justify-content-center">
-                            <div class="col-md-12 col-lg-10">
-                                <div class="row">
-                                    <div class="col-md-4 mb-md-0 mb-4">
-                                        <h2 class="footer-heading">Services</h2>
-                                        {{ if .Site.Menus.main }}                                           
-                                            <ul class="list-unstyled">                                                
-                                                {{ range sort .Site.Menus.main }}
-                                                    {{ if and .HasChildren (eq .Name "Services") }}  
-                                                        {{ range .Children }}
-                                                            <li><a href="{{ .URL }}" class="py-1 d-block">{{ .Name }}</a></li>
-                                                        {{ end }}
-                                
-                                                    {{ end }}
-                                                {{ end }}
-                                            </ul>
-                                            {{ end }}
-                                    </div>
-                                    <div class="col-md-4 mb-md-0 mb-4">
-                                        <h2 class="footer-heading">Discover</h2>
-                                        <ul class="list-unstyled">
-                                            <li><a href="/about-us" class="py-1 d-block">About us</a></li>
-                                            <li><a href="/contact-us" class="py-1 d-block">Contract us</a></li>
-                                            <li><a href="/terms" class="py-1 d-block">Terms &amp; Conditions</a></li>
-                                            <li><a href="/privacy" class="py-1 d-block">Privacy</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-4 mb-md-0 mb-4">
-                                        <h2 class="footer-heading">Partners</h2>
-                                        <ul class="list-unstyled">
-                                            {{ if .Site.Menus.main }}                                           
-                                            <ul class="list-unstyled">                                                
-                                                {{ range sort .Site.Menus.main }}
-                                                    {{ if and .HasChildren (eq .Name "Partners") }}  
-                                                        {{ range .Children }}
-                                                            <li><a href="{{ .URL }}" class="py-1 d-block">{{ .Name }}</a></li>
-                                                        {{ end }}
-                                
-                                                    {{ end }}
-                                                {{ end }}
-                                            </ul>
-                                            {{ end }}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-md-5">
                     <div class="col-md-12">
                         <p class="copyright">Copyright 2021 © All Rights Reserved</p>
                     </div>
+
+
+
+
                 </div>
             </div>
-            <div class="col-md-4 py-md-5 py-4 aside-stretch-right pl-lg-5">                  
+            <div class="col-md-4 py-md-5 py-4 aside-stretch-right px-4">                  
             <div style="clear: both">
                 <a class="twitter-timeline" 
                    data-lang="en" 

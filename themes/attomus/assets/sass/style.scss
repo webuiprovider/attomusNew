@@ -1,3 +1,7 @@
+$fontbody: 'Raleway', sans-serif;
+$fonthead: 'Montserrat', sans-serif;
+
+
 html{
     margin: 0px;
     padding: 0px;
@@ -7,8 +11,13 @@ body{
     margin: 0px;
     padding: 0px;
     font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    // font-family: 'Roboto', sans-serif;
+    font-family: $fontbody ;
+    font-weight: 500;
+    line-height: 1.7rem;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: $fonthead ;
 }
 ul, li{
     margin: 0px;
@@ -76,7 +85,7 @@ a{
         margin-left:5px;
         a{
             color: #fff;
-            font-size: 18px;
+            font-size: 20px;
             &:hover{
                 color: #00a99d;
             }
@@ -118,7 +127,7 @@ a{
                 padding: 15px 0;
 
                 a {
-                    font-size: 16px;
+                    font-size: 14px;
                     color: #fff;
                     text-transform: uppercase;
                     transition: all .5s;
@@ -143,10 +152,24 @@ a{
             .dropdown-menu{
                 background: #00a99d;
                 border: 0px 0px .25rem .25rem;
+                line-height: 1.7em;
+
+                &:before{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: -7px;
+                    left: 28px;
+                    border: 8px solid #fff;
+                    border-color: transparent transparent #00a99d #00a99d;
+                    transform: translateX(-50%) rotate(135deg);
+                    box-shadow: -2px 2px 3px rgba(57,73,76,.1);
+                }
 
                 a.dropdown-item{
                     margin: 0px;
-                    font-size: 14px;
+                    font-size: 13px;
+                    padding-left: 1.5em;
 
                     &:hover{
                         color: #00a99d;
@@ -203,7 +226,7 @@ a{
         font-weight: 400;
         margin-bottom: 20px;
     }
-    .banner-btn{margin-top: 80px;}
+    
 }
 
 .default-btn{
@@ -219,6 +242,23 @@ a{
         background: #00a99d;
         color: #fff;
     }
+}
+
+.btn-list{
+    margin-top: 80px;
+
+    .default-btn{
+        &:nth-child(even){
+            border: 2px solid #00a99d;
+            background: transparent ;
+            color: invert($color: #000000);
+
+            &:hover{                
+                background: #00a99d;
+            }
+        }
+    }
+
 }
 
 .box-features{
@@ -256,7 +296,7 @@ a{
         position: relative;
         margin-bottom: 30px;
         transition: all .5s;
-        font-size: 30px;
+        font-size: 26px;
         font-weight: 500;
 
         img{
@@ -295,10 +335,11 @@ a{
     }
 
     h3{
-        font-size: 28px;
+        font-size: 24px;
+        margin-bottom: 25px !important;
     }
     p {
-        font-size: 18px;    
+        font-size: 16px;    
         line-height: 1.5em;
     }
 
@@ -363,7 +404,7 @@ a{
         color: #fff;
         font-weight: 500;
         background: #000;
-        padding: 5px 8px;
+        padding: 7px 12px;
         display: inline-block;
 
         &.green{
@@ -372,11 +413,11 @@ a{
 
     }
     h2 {
-        font-size: 36px;
-        font-weight: 600;
+        font-size: 32px;
+        font-weight: 500;
         margin-bottom: 15px;
         position: relative;
-        line-height: 1.2;
+        line-height: 1.6em;
     }
 }
 .section-content{
@@ -391,7 +432,7 @@ a{
 
         li{
             position: relative;
-            margin-bottom: 25px;
+            margin-bottom: 40px;
             padding-left: 80px;
 
             .icon{
@@ -412,13 +453,18 @@ a{
                 }
             }
             h3{
-                font-size: 24px;
+                font-size: 20px;
                 font-weight: 600;
             }
 
             &:hover{
                 .icon{
                     background: #00a99d;
+                    color: #fff;
+                }
+
+                h3{
+                    color: #00a99d;
                 }
                 
             }
@@ -474,9 +520,10 @@ a{
             }
         }
         h3 {               
-                font-size: 22px;
+                font-size: 20px;
                 margin: 10px 0px;
                 color: #000;
+                line-height: 1.7rem;
         }
         p{
             color: #666666;
@@ -544,11 +591,11 @@ a{
     position: relative;
     background: #000;
     color: #fff;
-    padding-top: 150px;
+    padding: 100px 0px;
 
     &:after {
         right: 50%;
-        bottom: -50%;
+        bottom: -40%;
         width: 600px;
         height: 600px;
         z-index: 0;
@@ -568,15 +615,17 @@ a{
             font-size: 36px;
             font-weight: 500;
             text-transform: uppercase;
+            margin-bottom: 30px;
         }
         i{
             color: #1b5a55;
             font-size: 74px;
+            margin: 15px 0px;
         }
         p{
             font-size: 16px;
             line-height: 2em;
-            margin: 15px 0px;
+            margin: 15px 0px 40px;
         }
     }
 }
@@ -600,6 +649,8 @@ a{
       .client-name{
         padding: 8px 4px;
         text-align: center;
+        font-family: $fonthead ;
+        font-weight: 400;
       }
   }
   
@@ -721,6 +772,9 @@ a{
     overflow: hidden;
     background: #252525;
     color: #fff;
+    p{
+        line-height: 1.8rem;
+    }
 
     a {
         color: #1ba12d;
@@ -756,6 +810,11 @@ a{
                 -webkit-transform: translate(-50%, -50%);
                 -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
+                color: #fff;
+              }
+
+              &:hover{
+                background: #1ba12d;
               }
               
           }
@@ -764,6 +823,10 @@ a{
     ul.list-unstyled li a {
         color: rgba(255, 255, 255, 0.5);
         text-transform: capitalize;
+
+        &:hover{
+            color: #00a99d;
+        }
       }
 
       .aside-stretch-right {
