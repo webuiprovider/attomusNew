@@ -1,0 +1,29 @@
+<section class="hero inner" style="background-image: url({{.Params.hero.image | relURL }});"> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="banner-text">
+                    <h1>{{.Title | markdownify }}</h1> 
+                    {{if .Params.hero.subheading}} <h3 class="my-3">{{.Params.hero.subheading  }}</h3>     {{end}}
+                                  
+                    <ul>
+                        {{ define "breadcrumb" }}
+                        {{ with .Parent }}
+                            {{ template "breadcrumb" . }}
+                            <li class="breadcrumb-item"> <a href="{{ .Permalink }}">{{ if .IsHome }}Home{{ else }}{{ .Title }}{{ end }}</a> </li>
+                        {{ end }}
+                        {{ end }}
+                        {{ if not .IsHome }}
+                        
+                            {{ template "breadcrumb" . }}
+                        <li class="breadcrumb-item active" aria-current="page">  {{ .Title }}</li>
+                        
+                        {{ end }}
+                    </ul>
+
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

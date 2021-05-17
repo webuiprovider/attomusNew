@@ -1,0 +1,25 @@
+{{ $pos := default "container-fluid" (.Get "position") }}
+{{ $contpos := default "align-items-top" (.Get "content-position") }}
+{{if eq $pos "center" }}
+<div class="mainsection section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="image-main-conainter"><img src='{{.Get "image"}}' alt="{{.Get "alt"}}" class="img-fluid"></div>
+            </div>
+            <div class="col-lg-6 text-content">{{.Inner  }}</div>
+        </div>
+    </div>
+</div>
+{{else}}
+<div class="mainsection section ">
+    <div class="container-fluid">
+        <div class="row {{if eq $contpos "center" }} align-items-center {{else}} {{$contpos}} {{end}}">
+            <div class="col-lg-6 image-full-conainter">
+                <div class="image-full" style="background-image:url({{.Get "image"}}) ;"></div>
+            </div>
+            <div class="col-lg-6 text-content"><div class="full-content">{{.Inner  }}</div></div>
+        </div>
+    </div>
+</div>
+{{end}}

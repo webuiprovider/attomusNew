@@ -1,0 +1,173 @@
+{{ define "main" }}
+
+{{ partial "hero-inner.html" . }}
+
+<section class="main-content section bg-dark d-shape">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-6">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="contact-info-box">
+                     <div  class="icon">
+                        <i class="fa  fa-map-marker"></i>
+                     </div>
+                     <h3>Address</h3>
+                     <p class="mb-0">
+                        {{ .Params.Address | safeHTML }}
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-6">                  
+                  <div class="contact-info-box">
+                     <div  class="icon">
+                        <i class="fa  fa-phone"></i>
+                     </div>
+                     <h3>Phone</h3>
+                     <p class="mb-0">
+                        {{ .Params.phone | safeHTML }}
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-6">                  
+                  <div class="contact-info-box">
+                     <div  class="icon">
+                        <i class="fa  fa-envelope-open"></i>
+                     </div>
+                     <h3>Email</h3>
+                     <p class="mb-0">
+                        <a href="mailto:{{ .Params.email}}">{{ .Params.email}}</a>
+                     </p>
+                  </div>
+               </div>
+            </div>
+
+         </div>        
+         
+         <div class="col-md-6">                
+            <div class="contact-us">
+
+               <div>
+                  <div id="message-received" class="success-message">
+                     <button id="message-received__close">
+                           <img src="/img/close.png" alt="Success">
+                     </button>
+                     <svg viewBox="0 0 76 76" class="success-message__icon icon-checkmark">
+                           <circle cx="38" cy="38" r="36" />
+                           <path fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
+                              stroke-miterlimit="10" d="M17.7,40.9l10.9,10.9l28.7-28.7" />
+                     </svg>
+                     <h1 class="success-message__title">Message Received</h1>
+                     <div class="success-message__content">
+                           <p>Thank you for getting in touch</p>
+                     </div>
+                  </div>
+               </div>
+
+               <form class="contact-us__form" netlify name="attomus-contact" method="POST" action="/contact-us#message-received">
+                  <div class="row">
+                     <div class="col-md-6 mb-4">
+                        <input required name="First Name" type="text" placeholder="First Name" class="contact-us__form__col--6">
+                     </div>
+                     <div class="col-md-6 mb-4">
+                        <input required name="Last Name" type="text" placeholder="Last Name" class="contact-us__form__col--6">
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-6 mb-4">
+                        <input required name="Phone Number" type="phone" placeholder="Phone Number" class="contact-us__form__col--6">
+                     </div>
+                     <div class="col-md-6 mb-4">
+                        <input required name="Country" type="text" placeholder="Country" class="contact-us__form__col--6">
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-12 mb-4">
+                        <input required name="Email" type="email" placeholder="Your Email" class="contact-us__form__col--12">
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-12 mb-4">
+                        <textarea required name="Message" type="text" placeholder="Your Message" rows="5" class="contact-us__form__col--12"></textarea>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-12 mb-0">
+                        <input type="submit" value="Send your message" class="contact-us__form__col--6 contact-us__form__submit btn-default">
+                     </div>
+                  </div>
+                  
+               </form>
+
+         </div>
+
+
+
+         </div>
+      </div>
+   </div>
+   
+</section>
+
+
+
+{{ partial "partnerships.html" . }}
+{{ partial "footer-above.html" . }}
+
+
+<script> <!-- #TODO is this needed with Netlify? -->
+   function PathLoader(el) {
+       this.el = el;
+       this.strokeLength = el.getTotalLength();
+
+       // set dash offset to 0
+       this.el.style.strokeDasharray =
+           this.el.style.strokeDashoffset = this.strokeLength;
+   }
+
+   PathLoader.prototype._draw = function (val) {
+       this.el.style.strokeDashoffset = this.strokeLength * (1 - val);
+   }
+
+   PathLoader.prototype.setProgress = function (val, cb) {
+       this._draw(val);
+       if (cb && typeof cb === 'function') cb();
+   }
+
+   PathLoader.prototype.setProgressFn = function (fn) {
+       if (typeof fn === 'function') fn(this);
+   }
+
+   var body = document.body,
+       svg = document.querySelector('svg path');
+
+   if (svg !== null) {
+       svg = new PathLoader(svg);
+
+       setTimeout(function () {
+           document.body.classList.add('active');
+           svg.setProgress(1);
+       }, 200);
+   }
+
+   // document.addEventListener('click', function () {
+
+   //     if (document.body.classList.contains('active')) {
+   //         document.body.classList.remove('active');
+   //         svg.setProgress(0);
+   //         return;
+   //     }
+   //     document.body.classList.add('active');
+   //     svg.setProgress(1);
+   // });
+
+
+   
+
+</script>
+
+
+
+{{end}}
+
+

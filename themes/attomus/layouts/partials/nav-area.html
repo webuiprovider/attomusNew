@@ -18,7 +18,7 @@
                                 {{ if .HasChildren }}
                                 <!-- Navbar dropdown -->
                                 <li class="nav-item dropdown dropdown-hoverable" >
-                                    <a href="{{ .URL }}" class="nav-link dropdown-toggle" > {{ .Name }}  </a>
+                                    <a href="{{ .URL }}" class="nav-link dropdown-toggle {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }} {{ if $active }}active{{ end }}" > {{ .Name }}  </a>
                                     <div class="dropdown-menu">
                                         {{ range .Children }}
                                         <a href="{{ .URL }}" class="dropdown-item">{{ .Name }}</a>

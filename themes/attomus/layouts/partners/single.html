@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+{{ partial "hero-inner.html" . }}
+
+<section class="main-content">
+   <div class="mainsection section">
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-lg-6">
+                  <div class="image-main-conainter partner"><img src='{{ .Params.image}}' alt="{{ .Title }}" class="img-fluid"></div>
+              </div>
+              <div class="col-lg-6 text-content">{{ .Content }} </div>
+          </div>
+      </div>
+  </div>
+
+{{ partial "partneroffer.html" . }}
+<!-- {{ partial "success-message.html" . }} -->
+
+{{ if .Params.form}}
+{{ partial "partnerform.html" . }}
+
+{{end}}
+
+
+
+
+   
+</section>
+
+
+
+{{ partial "partnerships.html" . }}
+{{ partial "footer-above.html" . }}
+
+
+
+{{end}}
+
+

@@ -1,0 +1,75 @@
+<section class="section partnerform bg-dark d-shape">
+    <div class="container">
+        <form class="partner-form" netlify name="atlassian-form" method="POST" action="/services/atlassian-partner#message-received">
+            <div class="partner-form row">
+                <div class="partner-form__col--6 col-md-6"><label for="firstname">Name <span>*</span></label><input required name="first-name" id="firstname" type="text" placeholder="First Name"></div>
+                <div class="partner-form__col--6 col-md-6"><label for="lastname">&nbsp;</label><input required name="last-name" id="lastname" type="text" placeholder="Last Name"></div>
+                <div class="partner-form__col--6 col-md-6"><label for="companytitle">Company Title <span>*</span></label><input required name="company-title" id="companytitle" type="text" placeholder=" Number"></div>
+                <div class="partner-form__col--6 col-md-6"><label for="jobtitle">Job Title</label><input name="job-title" id="jobtitle" type="text" placeholder=""></div>
+                <div class="partner-form__col--6 col-md-6"><label for="email">Email <span>*</span></label><input required name="email" id="email" type="email" placeholder=""></div>
+                <div class="partner-form__col--6 col-md-6"><label for="telephone">Telephone <span>*</span></label><input required name="telephone" id="telephone" type="phone" placeholder=""></div>
+                <div class="partner-form__col--6 col-md-6"><label for="contryregion">County/Region <span>*</span></label><input required name="contryregion" id="contryregion" type="text" placeholder=""></div>
+                <div class="partner-form__col--6 col-md-6"><label for="country">Country <span>*</span></label><input required name="country" id="country" type="text" placeholder=""></div>
+                <div class="partner-form__col--12 col-md-12 mt-3"><label> <strong>Primary Business</strong>  <span>*</span></label>
+                    <div class="checkbox-row primary-business">
+                        <ul class="flex-row  flex-wrap flex-fill">
+                            <li><input type="checkbox" placeholder=""><label>Government</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Energy</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Manufacturing</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Software Development</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Financial Services</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Retail</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Consulting Services</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Other</label></li>
+                        </ul>
+                    </div>
+                    <p class="text-muted font-sm">Please select at least one option.</p>
+                </div>
+                <div class="partner-form__col--6 col-12 col--shrink"><label for="approximateusers"><strong>Approximate number of users</strong>  <span>*</span></label><input id="approximateusers" required name="approximate-users" type="number" placeholder="" class="w-50"></div>
+                               
+                <div class="partner-form__col--12 col-12 mt-3"><label><strong>Goal/Objective</strong>  <span>*</span></label>
+                    <div class="checkbox-row goal-objective">
+                        <ul class="flex-row  flex-wrap flex-fill">
+                            <li><input type="checkbox" placeholder=""><label>Security</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Performance</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Reducing Complexity</label></li>
+                      
+                            <li><input type="checkbox" placeholder=""><label>Reliability</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Technical Support</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Admin/Operational Responsiveness</label></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="partner-form__col--12 col-12"><label> <strong>Interest</strong> <span>*</span></label>
+                    <div class="checkbox-row interest">
+                        <ul class="flex-row  flex-wrap flex-fill">
+                            <li><input type="checkbox" placeholder=""><label>Dev Ops</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Technical Support/Operations Support</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Implementation Life-Cycle</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Consulting/Strategy</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Other</label></li>
+                        
+                            <li><input type="checkbox" placeholder=""><label>Licenses</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Non-Technical Support</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Migration</label></li>
+                            <li><input type="checkbox" placeholder=""><label>Performance Tuning</label></li>
+                        </ul>
+                    </div>
+                    <p class="text-muted">Please select at least one option.</p>
+                </div>
+                <div class="partner-form__col--6 col-12">
+
+                    <div class="btn-list">
+
+                        <input type="submit" value="Submit" id="atlassian-form__submit" class="default-btn w-auto">
+                        
+                    
+                    </div>
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

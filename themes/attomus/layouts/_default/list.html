@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+{{ partial "hero-inner.html" . }}
+
+<section class="section">
+    <div class="container">
+        <div class="row page-list">
+
+            
+            {{range .Pages}}   
+                <div class="col-md-6 mb-5">   
+                    <div class="box-list">               
+                        <div class="content">
+                            <h2>{{.Title}}</h2>
+                            <p>{{.Description | safeHTML | truncate 200}}</p>
+                        </div>
+                        <div class="img-container" style="background-image: url({{.Params.image}}) ;"></div>
+                        <a href="{{.Permalink}}"> </a>
+                    </div>  
+                </div>
+                
+            {{end}}
+        </div>
+    </div>
+</section>
+
+
+
+{{ partial "partnerships.html" . }}
+{{ partial "footer-above.html" . }}
+
+
+
+{{end}}
+
+
