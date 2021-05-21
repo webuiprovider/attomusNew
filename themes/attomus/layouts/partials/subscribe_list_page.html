@@ -1,0 +1,43 @@
+<form class="subscribe-box d-shape" id="subscribe_blog_list_page" name="revue-form" target="_blank" method="POST" data-netlify="true" action="https://api.follow.it/subscription-form/a2NkanVaZk4xejBVaUlEVlU2ek9QckUvMUZsZEhzNXRKTFhlMVpoOHpsOEFqcDBQK3haMUd3SEF4Qm15dHc2WHFVeTBHa2wxa3ZWdU1aWjQ2OUNCdTVlbktwbUFiV0ZjUlgwVitYVUU4TVVVRFlLWkx6WG9rS255Vk5XcERhcjd8YTlmYWErYnUrRjd3M1RGdllkWWtTYU85dWJqbjVjQVFsdXRvNEttRGxGST0=/8">
+
+<!-- UUpdated SA 9.11.20 - old form used action="https://www.getrevue.co/profile/attomus/add_subscriber">  -->
+  <div class="container">
+     <h3 class="subscribe_heading">Subscribe</h3>
+    <p>Register if you want to learn about cybersecurity and advanced tech.</p>
+    <p ><em><small>You can unsubscribe with one click, and we'll never share your email address.</em></small></p>
+  </div>
+
+  <div class="container">
+    <p class="hidden">
+      <label class="hidden">Don’t fill this out if you're human: <input name="bot-field" id="bot-field" /></label>
+    </p>
+    <input type="text"  class="revue-form-field" placeholder="Name" name="member[first_name]" required>
+    <input type="text" placeholder="Email" name="email" required>
+
+<!-- SA updated 9/11/20 to work for Follow.it    <input type="text"  class="revue-form-field" placeholder="Email address" name="member[email]" required> -->
+    <!-- <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label> -->
+  </div>
+
+  <div class="container">
+    <input type="submit" value="Subscribe" class="btn">
+
+  </div>
+</form>
+
+<script>
+/*
+$(document).ready(function() {
+  $("#subscribe_blog_list_page").submit(function(e) {
+    e.preventDefault();
+    if (!$('#bot-field').val()) {
+      var $form = $(this);
+      $.post($form.attr("action"), $form.serialize()).then(function() {
+        alert("Thank you!");
+      });
+    }
+  });
+})
+*/
+</script>
