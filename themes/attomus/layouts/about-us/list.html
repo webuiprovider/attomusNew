@@ -1,0 +1,188 @@
+{{ define "main" }}
+
+{{ partial "hero-inner.html" . }}
+
+<section class="section">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-lg-7 col-md-12">
+                <div class="about-left-wrap h-100">
+                    <div class="about-us-content">
+                        <div class="section-title-wrap">
+                            <h4 class="heading-title mb-3">{{.Params.aboutsec.left.title}}</h4>
+                            <p> {{.Params.aboutsec.left.text | safeHTML}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <div class="about-right-wrap h-100">
+
+                    {{range .Params.aboutsec.right}}
+                    <div class="content mb-3">
+                        <h4 class="heading-title mb-3">{{.title}}</h4>
+                        <div class="text">{{ .text | safeHTML | markdownify }}</div>
+                    </div>
+
+                    {{end}}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section  class="section darklight">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="about-images text-center">                    
+                    <div class="about-title">
+                        <h4 class="">{{.Params.customer.title}}</h4>
+                    </div>
+                    <div class="img-box">
+                        <img src="{{.Params.customer.image}}" class="img-fluid" alt="{{.Params.customer.title}}">
+                    </div>
+                </div>
+            </div>            
+            <div class="col-md-6">
+                <div class="row">
+                    {{range .Params.customer.list}}
+                    <div class="col-md-6">
+                        <div class="future-box-wrap text-center">
+                            <div class="box-icon">
+                                <i class="{{.icon}}"></i>
+                            </div>
+                            <div class="content">
+                                <h4 class="heading-title mb-3">{{.heading}}</h4>
+                                <div class="text-white">{{.text}}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{end}}
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section  class="section security">
+    <div class="container">
+        <div class="row">          
+            <div class="col-md-6">
+                <div class="future-box-wrap text-black ">
+                    
+                    <div class="content  ">
+                        <div class="text-black">{{.Params.security.content | markdownify}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about-images text-center">                    
+                    <div class="about-title">
+                        <h4 class="">{{.Params.security.title}}</h4>
+                    </div>
+                    <div class="img-box">
+                        <img src="{{.Params.security.image}}" class="img-fluid" alt="{{.Params.security.title}}">
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</section>
+
+
+<section  class="section bg-light">
+    <div class="container">
+        <div class="row"> 
+            <div class="col-md-6">
+                <div class="about-images text-center">                    
+                    <div class="about-title">
+                        <h4 class="">{{.Params.people.title}}</h4>
+                    </div>
+                    <div class="img-box">
+                        <img src="{{.Params.people.image}}" class="img-fluid" alt="{{.Params.people.title}}">
+                    </div>
+                </div>
+            </div>           
+            <div class="col-md-6">
+                <div class="future-box-wrap text-black ">
+                    
+                    <div class="content  ">
+                        <div class="text-black">{{.Params.people.content | markdownify}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section  class="section darklight">
+    <div class="container">
+        <div class="row">          
+            <div class="col-md-6">
+                <div class="future-box-wrap text-black ">
+                    
+                    <div class="content  ">
+                        <div class="text-white">{{.Params.partner.content | markdownify}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about-images text-center">                    
+                    <div class="about-title">
+                        <h4 class="">{{.Params.partner.title}}</h4>
+                    </div>
+                    <div class="img-box">
+                        <img src="{{.Params.partner.image}}" class="img-fluid" alt="{{.Params.partner.title}}">
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</section>
+
+
+
+
+<section  class="section">
+    <div class="container">
+        <div class="row">          
+            <div class="col-md-6">
+                <div class="future-box-wrap text-black ">
+                    
+                    <div class="content  ">
+                        <div class="text-black">{{.Params.tech.content | markdownify}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about-images text-center">                    
+                    <div class="about-title">
+                        <h4 class="">{{.Params.tech.title}}</h4>
+                    </div>
+                    <div class="img-box">
+                        <img src="{{.Params.tech.image}}" class="img-fluid" alt="{{.Params.tech.title}}">
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</section>
+
+
+
+{{ partial "partnerships.html" . }}
+{{ partial "footer-above.html" . }}
+
+
+
+{{end}}
+
+

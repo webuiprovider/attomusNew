@@ -1545,3 +1545,130 @@ a{
 .box-images-arrow:hover::before {
     transform: translateY(0);
 }
+
+.about-left-wrap {
+    background: #f1f1f1;
+    padding: 60px 40px 60px 40px;
+
+    .section-sub-title {
+        color: #00a99d;
+        line-height: 1.43;
+        font-weight: 600;
+    }
+}
+
+.about-right-wrap {
+    background: #f6f5f5;
+    padding: 60px 20px 60px 40px;
+    height: 100%;
+
+    ul {  
+        li{
+        list-style: none;
+        position: relative;
+        padding-left: 25px;
+
+            &::before{
+                content: "\f00c";
+                position: absolute;
+                left: 0px;
+                font-family: fontawesome;
+                font-size: 15px;
+                color: #00a99d;
+            }
+        }
+    }
+}
+
+ul.tick{
+    li{
+        list-style: none;
+        position: relative;
+        padding-left: 25px;
+
+        &::before{
+            content: "\f00c";
+            position: absolute;
+            left: 0px;
+            font-family: fontawesome;
+            font-size: 15px;
+            color: #00a99d;
+        }
+    }
+}
+
+.about-images{
+    padding: 50px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        height: 80%;
+        width: 95%;
+        background: rgba(0,168,157,0.5);
+        margin-left: auto;
+        margin-right: auto;
+        right: 0px;
+    }
+     .img-box {
+        z-index: 1;
+        position: relative;
+    }
+
+    .about-title {
+        background: rgba(0,168,157,1);
+        padding: 12px 20px;
+        position: absolute;
+        top: 10px;
+        z-index: 3;
+        left: 25px;
+        color: #fff;
+        h4{
+            margin: 0px;
+        }
+    }
+}
+
+.future-box-wrap{
+    margin-bottom: 20px;
+    .box-icon{
+        width: 60px;
+        height: 60px;
+        background: #000;
+        border-radius: 50%;
+        border: 5px solid #464646;
+        text-align: center;
+        color: #fff;
+        line-height: 55px;
+        font-size: 20px;
+        margin: 0px auto 15px;
+    }
+    h4{
+        font-size: 16px;
+        font-weight: 600;
+        color: rgba(0,168,157,1);
+    }
+    .content{
+        ul {  
+            li{
+            list-style: none;
+            position: relative;
+            padding-left: 25px;
+    
+                &::before{
+                    content: "\f00c";
+                    position: absolute;
+                    left: 0px;
+                    font-family: fontawesome;
+                    font-size: 15px;
+                    color: #00a99d;
+                }
+            }
+        }       
+    
+        color: #000000;
+    }
+}

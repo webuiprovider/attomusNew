@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+{{ partial "hero-inner.html" . }}
+
+<section class="main-content">
+   {{ .Content }} 
+</section>
+
+
+
+{{ partial "partnerships.html" . }}
+{{ partial "footer-above.html" . }}
+
+
+
+{{end}}
+
+
